@@ -1,8 +1,12 @@
 import css from "./LoadMoreBtn.module.css";
 
-const LoadMoreBtn = ({ onLoadMore, searchQuery }) => {
+interface Props {
+  onLoadMore: (searchQuery: string | undefined) => void;
+  searchQuery?: string | null;
+}
+const LoadMoreBtn: React.FC<Props> = ({ onLoadMore, searchQuery }) => {
   const loadMore = () => {
-    onLoadMore(searchQuery);
+    onLoadMore(searchQuery !== null ? searchQuery : undefined);
   };
   return (
     <div className={css.btnWraper}>

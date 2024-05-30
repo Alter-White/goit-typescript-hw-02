@@ -1,10 +1,24 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 const ACCESS_KEY = "bC9Y0JD6XZ2qTWbs8qQwT_4PTroYWKuL_hxdm6je2to";
 
-export const requestPicsByQuery = async (query, page) => {
+interface UnsplashResponse {
+  results: UnsplashPhoto[];
+}
+
+interface UnsplashPhoto {
+  id: string;
+  urls: {
+    regular: string;
+  };
+}
+
+export const requestPicsByQuery = async (
+  query: string,
+  page: number
+): Promise<UnsplashResponse> => {
   try {
-    const { data } = await axios.get(
+    const { data }: AxiosResponse<UnsplashResponse> = await axios.get(
       `https://api.unsplash.com/search/photos?page=${page}&query=${query}&per_page=20`,
       {
         headers: {
