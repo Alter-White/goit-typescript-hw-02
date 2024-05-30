@@ -1,0 +1,13 @@
+ .modalWrapper {
+     position: absolute;
+     inset: 0;
+     overflow: hidden;
+     padding: 20px;
+
+ }
+
+ .img {
+     width: 100%;
+     object-fit: contain;
+     height: 100%;
+ }

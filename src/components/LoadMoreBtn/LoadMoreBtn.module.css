@@ -1,0 +1,12 @@
+.btnWraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.loadMoreBtn {
+    font-size: 20px;
+    background-color: #a4afff;
+    border: none;
+}

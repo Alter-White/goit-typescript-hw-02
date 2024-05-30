@@ -1,0 +1,13 @@
+.galleryList {
+    column-count: 4;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+.galleryItem {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin: 0;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}

@@ -1,0 +1,12 @@
+ .cardWrapper {
+     border: 2px solid black;
+     border-radius: 5px;
+ }
+
+ .descWrapper {
+     padding: 5px;
+ }
+
+ .cardImage {
+     cursor: pointer;
+ }
